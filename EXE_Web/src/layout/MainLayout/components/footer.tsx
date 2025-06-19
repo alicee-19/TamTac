@@ -1,4 +1,5 @@
 import logo from '@/assets/full-logo-white.svg';
+import { STORE_INFO } from '@/utils/mockupData';
 
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,7 +15,7 @@ const Footer = () => {
               <img src={logo} alt='Tấm Tắc Logo' className='relative p-2' />
             </div>
             <div className='mt-6 flex mx-auto space-x-4'>
-              <Link to='#' className='hover:opacity-80 transition-opacity'>
+              <Link to='https://www.facebook.com/tamtac.vn' className='hover:opacity-80 transition-opacity'>
                 <div className='bg-white/20 rounded-full p-2'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -58,16 +59,16 @@ const Footer = () => {
             <h3 className='text-xl font-semibold mb-4 pb-2 border-b border-white/20'>Thông tin</h3>
             <ul className='space-y-3'>
               <li>
-                <Link to='/about' className='hover:underline transition-all inline-block'>
-                  Về Tấm Tắc
-                </Link>
+                {/* <Link to='#' className='hover:underline transition-all inline-block'> */}
+                Về Tấm Tắc
+                {/* </Link> */}
               </li>
               <li>
-                <Link to='/story' className='hover:underline transition-all inline-block'>
-                  Chuyện Cơm Tấm
-                </Link>
+                {/* <Link to='/story' className='hover:underline transition-all inline-block'> */}
+                Chuyện Cơm Tấm
+                {/* </Link> */}
               </li>
-              <li>
+              {/* <li>
                 <Link to='/news' className='hover:underline transition-all inline-block'>
                   Tin tức & Khuyến mãi
                 </Link>
@@ -76,7 +77,7 @@ const Footer = () => {
                 <Link to='/career' className='hover:underline transition-all inline-block'>
                   Tuyển dụng
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -85,14 +86,14 @@ const Footer = () => {
             <h3 className='text-xl font-semibold mb-4 pb-2 border-b border-white/20'>Dịch vụ</h3>
             <ul className='space-y-3'>
               <li>
-                <Link to='/order' className='hover:underline transition-all inline-block'>
+                <Link to='/menu' className='hover:underline transition-all inline-block'>
                   Đặt hàng
                 </Link>
               </li>
               <li>
-                <Link to='/franchise' className='hover:underline transition-all inline-block'>
-                  Nhượng quyền
-                </Link>
+                {/* <Link to='/franchise' className='hover:underline transition-all inline-block'> */}
+                Nhượng quyền
+                {/* </Link> */}
               </li>
             </ul>
           </div>
@@ -103,19 +104,15 @@ const Footer = () => {
             <ul className='space-y-4'>
               <li className='flex items-start'>
                 <MapPin className='mr-3 h-5 w-5 mt-0.5 flex-shrink-0' />
-                <span>Lô E2a-7, Đường D1, Long Thạnh Mỹ, Thành Phố Thủ Đức, Hồ Chí Minh</span>
+                <span>{STORE_INFO.address}</span>
               </li>
               <li className='flex items-center'>
                 <Phone className='mr-3 h-5 w-5 flex-shrink-0' />
-                <a href='tel:0902123456' className='hover:underline transition-all'>
-                  0902-123-456
-                </a>
+                {STORE_INFO.phone}
               </li>
               <li className='flex items-center'>
                 <Mail className='mr-3 h-5 w-5 flex-shrink-0' />
-                <a href='mailto:cskh@tamtac.com' className='hover:underline transition-all'>
-                  cskh@tamtac.com
-                </a>
+                cskh@tamtac.com
               </li>
             </ul>
           </div>
