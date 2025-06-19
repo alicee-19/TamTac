@@ -207,7 +207,7 @@ const Login = () => {
                     <Button
                       type='button'
                       variant={'link'}
-                      className='w-full py-8'
+                      className='w-full py-8 hover:cursor-pointer'
                       onClick={() => (window.location.href = '/')}
                     >
                       Về trang chủ
