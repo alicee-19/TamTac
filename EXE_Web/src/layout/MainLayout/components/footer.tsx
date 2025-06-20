@@ -32,7 +32,7 @@ const Footer = () => {
                   </svg>
                 </div>
               </Link>
-              <Link to='#' className='hover:opacity-80 transition-opacity'>
+              {/* <Link to='#' className='hover:opacity-80 transition-opacity'>
                 <div className='bg-white/20 rounded-full p-2'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -50,7 +50,7 @@ const Footer = () => {
                     <line x1='17.5' y1='6.5' x2='17.51' y2='6.5' />
                   </svg>
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
