@@ -14,6 +14,7 @@ import { useState } from 'react';
 
 import { CancelOrderDialog } from '../cancel-order';
 import { LoadingSpinner } from '../loading-spinner';
+import OrderProgressTracker from '../order-progress-tracker';
 
 interface OrderDetailsDialogProps {
   order: OrderResponse;
@@ -26,6 +27,7 @@ export function OrderDetailsDialog({ order, open, onClose }: OrderDetailsDialogP
   const [closable, setClosable] = useState(open);
 
   const withdrawable = [OrderStatus.UNPAID, OrderStatus.VERIFIED];
+
   // Get status badge
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -148,6 +150,9 @@ export function OrderDetailsDialog({ order, open, onClose }: OrderDetailsDialogP
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* Order Progress Tracker */}
+                <OrderProgressTracker currentStatus={order.orderStatus} className='mb-6' />
 
                 {/* Order items */}
                 <Card className='border-none shadow-sm gap-0'>

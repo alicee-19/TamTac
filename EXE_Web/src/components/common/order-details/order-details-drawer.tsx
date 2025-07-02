@@ -14,6 +14,7 @@ import { useState } from 'react';
 
 import { CancelOrderDrawer } from '../cancel-order';
 import { LoadingSpinner } from '../loading-spinner';
+import OrderProgressTracker from '../order-progress-tracker';
 
 interface OrderDetailsDrawerProps {
   order: OrderResponse;
@@ -148,6 +149,8 @@ export function OrderDetailsDrawer({ order, open, onClose }: OrderDetailsDrawerP
                     </div>
                   </CardContent>
                 </Card>
+
+                <OrderProgressTracker currentStatus={order.orderStatus} className='mb-6' />
 
                 {/* Order items */}
                 <Card className='border-none shadow-sm gap-0'>

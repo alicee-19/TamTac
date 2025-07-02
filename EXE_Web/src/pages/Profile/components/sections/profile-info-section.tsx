@@ -31,9 +31,9 @@ export default function ProfileInfoSection({ user, totalOrders, isLoading }: Pro
                 {user?.phone}
               </div>
               <div className='flex items-center gap-1'>
-                {user.email ? (
+                {user?.email ? (
                   <>
-                    <Mail className='h-4 w-4' /> {user.email}
+                    <Mail className='h-4 w-4' /> {user?.email}
                   </>
                 ) : (
                   <></>
